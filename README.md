@@ -3,7 +3,7 @@ CLI app for game sessions duration analyze (based on saves modification time)
 
 # Usage
 App scan dir, and combine saves to game session. U could specify:
-* delay between saves.
+* delay between saves in one session.
 * how match saves should be in session to plus it to total time.
 
 ![image](https://user-images.githubusercontent.com/42908925/148992816-b84ae359-b15b-4353-aa45-e858683aec2d.png)
