@@ -123,10 +123,6 @@ func main() {
 				if sdelay := saveDate - sessionStopStamp; sdelay < oneSessionSaveDelay {
 					sessionTime += sdelay
 					sessionSavesCount++
-					if i == len(saveDates)-1 {
-						sessionStopStamp = saveDate
-						saveSession(false)
-					}
 				} else {
 					saveSession(true)
 					sessionStartStamp = saveDate
@@ -134,6 +130,9 @@ func main() {
 					sessionSavesCount = 1
 				}
 				sessionStopStamp = saveDate
+				if i == len(saveDates)-1 {
+					saveSession(false)
+				}
 			}
 
 			if printTable {
